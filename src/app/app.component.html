@@ -1,60 +1,58 @@
-
-
-
-<div  class="container-fluid main">
-
-    <div *ngIf="Loading" class="row center ">
-        <div class="lds-circle"><div></div></div>
-    </div>
-     <div class="row" style="height: 20vh;"></div>
-     <div *ngIf="!Loading" class="row " >
-          <div class="col-md-4"></div>
-          <div class="col-md-4 weather-container">
-                <div class="row justify-content-md-center row-weather country" >
-                   
-                    {{weather.name}}
-                </div>
-                <div class="row justify-content-md-center row-weather" >
-                    <div class="col-md-6">
-                        <strong>Description</strong>
-                    </div>
-                    <div class="col-md-6">
-                         {{weather.weather[0].description}}
-                    </div>
-              </div>
-              <div class="row justify-content-md-center row-weather">
-                <div class="col-md-6">
-                    <strong>Temperature</strong>
-                </div>
-                <div class="col-md-6">
-                     {{weather.main.temp-273 | number : '1.2-2'}}   ْC
-              </div>
-          </div>
-                <div class="row justify-content-md-center row-weather">
-                      <div class="col-md-6">
-                          <strong>Humidity</strong>
-                      </div>
-                      <div class="col-md-6">
-                        {{weather.main.humidity}}
-                    </div>
-                </div>
-                <div class="row justify-content-md-center row-weather">
-                     <div class="col-md-6">
-                         <strong>Pressure</strong>
-                     </div>
-                     <div class="col-md-6">
-                        {{weather.main.pressure}}
-                     </div>
-                </div>
-                <div class="row justify-content-md-center row-weather">
-                    <div class="col-md-6">
-                        <strong>Wind</strong>
-                    </div>
-                    <div class="col-md-6">
-                          Speed :  <p>{{weather.wind.speed}}</p>   Deg : <p>{{weather.wind.deg}}</p> 
-                    </div>
-                </div>
-          </div>
-          <div class="col-md-4"></div>
+<div class="container-fluid main">
+  <div *ngIf="Loading" class="row center">
+    <div class="lds-circle"><div></div></div>
+  </div>
+  <div class="row" style="height: 20vh"></div>
+  <div *ngIf="!Loading" class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 weather-container">
+      <div class="row justify-content-md-center row-weather country">
+        {{ weather.name }}
       </div>
+      <div class="row justify-content-md-center row-weather">
+        <div class="col-md-6">
+          <strong>Description</strong>
+        </div>
+        <div class="col-md-6">
+          {{ weather.weather[0].description }}
+        </div>
+      </div>
+      <div class="row justify-content-md-center row-weather">
+        <div class="col-md-6">
+          <strong>Temperature</strong>
+        </div>
+        <div class="col-md-6">
+          {{ weather.main.temp - 273 | number: "1.2-2" }} ْC
+        </div>
+      </div>
+      <div class="row justify-content-md-center row-weather">
+        <div class="col-md-6">
+          <strong>Humidity</strong>
+        </div>
+        <div class="col-md-6">
+          {{ weather.main.humidity }}
+        </div>
+      </div>
+      <div class="row justify-content-md-center row-weather">
+        <div class="col-md-6">
+          <strong>Pressure</strong>
+        </div>
+        <div class="col-md-6">
+          {{ weather.main.pressure }}
+        </div>
+      </div>
+      <div class="row justify-content-md-center row-weather">
+        <div class="col-md-6">
+          <strong>Wind</strong>
+        </div>
+        <div class="col-md-6">
+          Speed :
+          <p>{{ weather.wind.speed }}</p>
+          Deg :
+          <p>{{ weather.wind.deg }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
 </div>
